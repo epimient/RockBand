@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Nightfall Asylum</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="font-family: 'Metal Mania', cursive;">Nightfall Asylum</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="the_band.html">The Band</a></li>
+          <li class="nav-item"><a class="nav-link" href="listen.html">Listen</a></li>
+          <li class="nav-item"><a class="nav-link" href="buy_tickets.html">Buy Tickets</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Galería en collage -->
+  <section id= "intro" class="gallery-section bg-dark text-white py-5" style="padding-top: 80px;">
+    <div class="container">
+      <h1 class="display-5 mb-4" style="color: #ff0000; font-family: 'Metal Mania', cursive;">Gallery</h1>
+      <div class="row g-2">
+        
+        <!-- Imágenes en collage con el mismo data-lightbox -->
+        <div class="col-6 col-md-4">
+          <a href="img/gallery/1.jpg" data-lightbox="gallery" data-title="Nightfall Asylum - Image 1">
+            <img src="img/gallery/1.jpg" alt="Image 1" class="img-fluid rounded same-size">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="img/gallery/2.jpg" data-lightbox="gallery" data-title="Nightfall Asylum - Image 2">
+            <img src="img/gallery/2.jpg" alt="Image 2" class="img-fluid rounded same-size">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="img/gallery/3.jpg" data-lightbox="gallery" data-title="Nightfall Asylum - Image 3">
+            <img src="img/gallery/3.jpg" alt="Image 3" class="img-fluid rounded same-size">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="img/gallery/4.jpg" data-lightbox="gallery" data-title="Nightfall Asylum - Image 4">
+            <img src="img/gallery/4.jpg" alt="Image 4" class="img-fluid rounded same-size">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="img/gallery/5.jpg" data-lightbox="gallery" data-title="Nightfall Asylum - Image 5">
+            <img src="img/gallery/5.jpg" alt="Image 5" class="img-fluid rounded same-size">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="img/gallery/6.jpg" data-lightbox="gallery" data-title="Nightfall Asylum - Image 6">
+            <img src="img/gallery/6.jpg" alt="Image 6" class="img-fluid rounded same-size">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="img/gallery/7.jpg" data-lightbox="gallery" data-title="Nightfall Asylum - Image 7">
+            <img src="img/gallery/7.jpg" alt="Image 7" class="img-fluid rounded same-size">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="img/gallery/8.jpg" data-lightbox="gallery" data-title="Nightfall Asylum - Image 8">
+            <img src="img/gallery/8.jpg" alt="Image 8" class="img-fluid rounded same-size">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="img/gallery/9.jpg" data-lightbox="gallery" data-title="Nightfall Asylum - Image 9">
+            <img src="img/gallery/9.jpg" alt="Image 9" class="img-fluid rounded same-size">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Línea de Separación Roja -->
+  <hr class="separator-line">
+
+  <!-- Footer con formulario de suscripción -->
+  <section class="text-white bg-dark py-4" style="margin-bottom: 0;">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      
+      <!-- Formulario de Suscripción -->
+      <div class="col-md-6 col-lg-4">
+        <p>Subscribe for Updates</p>
+        <form>
+          <input type="email" class="form-control mb-2" placeholder="Email" required>
+          <button type="submit" class="btn btn-outline-danger">Subscribe</button>
+        </form>
+      </div>
+      
+      <!-- Información de Contacto (Footer) -->
+      <div class="col-md-6 col-lg-4 text-end">
+        <p>Management & Booking</p>
+        <p>Email: info@nightfallasylum.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+    
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>

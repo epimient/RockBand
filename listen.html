@@ -30,49 +30,93 @@
   </nav>
 
   <!-- Sección de Escucha de Música -->
-  <section class="listen-section bg-dark text-white py-5">
+  <section id="listen" class="listen-section bg-dark text-white py-5 ">
     <div class="container d-flex flex-wrap">
       <!-- Texto de Introducción -->
-      <div class="col-md-6">
+      <div id="intro" class="col-md-6">
         <h1 class="display-5" style="color: #ff0000;">LISTEN TO OUR MUSIC</h1>
         <p class="mt-3">Explora las oscuras y cautivadoras melodías de Nightfall Asylum. Déjate llevar por nuestra música y vive la experiencia.</p>
-        <button class="btn btn-outline-light mt-3">Buy Album $9.99</button>
-        <button class="btn btn-outline-light mt-3">Share Album</button>
+        <button class="btn btn-outline-danger mt-3">Buy Album $9.99</button>
+        <button class="btn btn-outline-danger mt-3">Share Album</button>
       </div>
       
-      <!-- Imagen del Álbum y Reproductor de SoundCloud -->
+      <!-- Reproductor de Música -->
       <div class="col-md-6 text-center">
-        <!-- Reproductor de SoundCloud -->
-        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1906412103&color=%23ff0000&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/eduardo-pimienta-877714963" title="Eduardo Pimienta" target="_blank" style="color: #cccccc; text-decoration: none;">Eduardo Pimienta</a> · <a href="https://soundcloud.com/eduardo-pimienta-877714963/sets/haunted-whispers" title="Haunted Whispers" target="_blank" style="color: #cccccc; text-decoration: none;">Haunted Whispers</a></div>
+        <div class="music-player card bg-dark text-white p-3">
+          <div class="display text-center mb-3">
+            <img id="cover" src="img/album_cover.jpg" alt="Cover" class="img-fluid rounded mb-2">
+            
+            <!-- Contenedor de desplazamiento -->
+            <div class="scrolling-text">
+              <p id="song-info">Nombre: Canción actual | Artista: Nightfall Asylum | Álbum: Haunted Whispers</p>
+            </div>
+            
+          </div>
+          
+          <div class="controls d-flex justify-content-center gap-3 mb-3">
+            <button id="prev" class="btn btn-outline-light btn-sm">
+              <img src="img/rewind.svg" alt="Rewind" class="control-icon">
+            </button>
+            <button id="play" class="btn btn-outline-light btn-sm">
+              <img src="img/play.svg" alt="Play" class="control-icon">
+            </button>
+            <button id="pause" class="btn btn-outline-light btn-sm" style="display: none;">
+              <img src="img/stop.svg" alt="Pause" class="control-icon">
+            </button>
+            <button id="next" class="btn btn-outline-light btn-sm">
+              <img src="img/forward.svg" alt="Forward" class="control-icon">
+            </button>
+          </div>
+          
+          <!-- Barra de Progreso -->
+          <input type="range" id="progress-bar" class="w-100" value="0" max="100">
+          
+          <!-- Lista de Música -->
+          <ul id="playlist" class="list-group">
+            <li class="list-group-item list-group-item-dark text-white d-flex justify-content-between" onclick="selectSong(0)">
+              <span>Ghosts in the Machine</span>
+              <span class="track-duration">3:45</span>
+            </li>
+            <li class="list-group-item list-group-item-dark text-white d-flex justify-content-between" onclick="selectSong(1)">
+              <span>Whispers in the Dark</span>
+              <span class="track-duration">4:10</span>
+            </li>
+            <li class="list-group-item list-group-item-dark text-white d-flex justify-content-between" onclick="selectSong(2)">
+              <span>Eternal Midnight</span>
+              <span class="track-duration">5:02</span>
+            </li>
+          </ul>
+        </div>
+      </div>      
+    </div>
+  </section>
+
+  <!-- Línea de Separación Roja -->
+  <hr class="separator-line">
+
+  <section class="text-white bg-dark py-4">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <!-- Formulario de Suscripción -->
+      <div class="col-md-6 col-lg-4">
+        <p>Subscribe for Updates</p>
+        <form>
+          <input type="email" class="form-control mb-2" placeholder="Email" required>
+          <button type="submit" class="btn btn-outline-danger">Subscribe</button>
+        </form>
+      </div>
+      
+      <!-- Información de Contacto (Footer) -->
+      <div class="col-md-6 col-lg-4 text-end">
+        <p>Management & Booking</p>
+        <p>Email: info@nightfallasylum.com</p>
+        <p>Phone: 123-456-7890</p>
       </div>
     </div>
   </section>
 
-    <!-- Línea de Separación Roja -->
-<hr class="separator-line">
+  <audio id="audio-player" src="audio/Ghosts in the Machine.mp3"></audio>
 
-<section class="text-white bg-dark py-4">
-  <div class="container d-flex justify-content-between align-items-center flex-wrap">
-    
-    <!-- Formulario de Suscripción -->
-    <div class="col-md-6 col-lg-4">
-      <p>Subscribe for Updates</p>
-      <form>
-        <input type="email" class="form-control mb-2" placeholder="Email" required>
-        <button type="submit" class="btn btn-light">Subscribe</button>
-      </form>
-    </div>
-    
-    <!-- Información de Contacto (Footer) -->
-    <div class="col-md-6 col-lg-4 text-end">
-      <p>Management & Booking</p>
-      <p>Email: info@nightfallasylum.com</p>
-      <p>Phone: 123-456-7890</p>
-    </div>
-  
-  </div>
-</section>
-
+  <script src="js/player.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

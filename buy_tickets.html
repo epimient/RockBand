@@ -31,7 +31,7 @@
 
   <!-- Sección de Compra de Boletos -->
   <section class="buy-tickets-section bg-dark text-white py-5">
-    <div class="container">
+    <div id="intro" class="container">
       <h1 class="display-5 mb-4" style="color: #ff0000;">TOUR DATES</h1>
       
       <div class="tour-date mb-4 d-flex justify-content-between align-items-center">
@@ -75,10 +75,15 @@
     </div>
   </section>
 
+<!-- Banner de ancho completo debajo de la sección de compra de boletos -->
+<div class="container-fluid px-0">
+  <img src="img/banner.png" alt="Nightfall Asylum Live Concert Banner" class="img-fluid w-100">
+</div>
+
   <!-- Línea de Separación Roja -->
   <hr class="separator-line">
 
-  <section class="text-white bg-dark py-4">
+  <section class="text-white bg-dark py-4" style="margin-bottom: 0;">
     <div class="container d-flex justify-content-between align-items-center flex-wrap">
       
       <!-- Formulario de Suscripción -->
@@ -86,7 +91,7 @@
         <p>Subscribe for Updates</p>
         <form>
           <input type="email" class="form-control mb-2" placeholder="Email" required>
-          <button type="submit" class="btn btn-light">Subscribe</button>
+          <button type="submit" class="btn btn-outline-danger">Subscribe</button>
         </form>
       </div>
       

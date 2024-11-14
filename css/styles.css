@@ -6,7 +6,11 @@ body, html {
     width: 100%;
     height: 100%;
   }
-  
+
+  #listen {
+    padding-top: 100px; /* Ajusta este valor conforme sea necesario */
+  }
+
   .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
@@ -108,4 +112,170 @@ h1 {
 .divider {
   border-top: 1px solid #666;
   margin: 0;
+}
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo del reproductor de música */
+.music-player {
+  width: 100%;
+  max-width: 400px; /* Aumenta el ancho del reproductor */
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 20px;
+  color: #ff0000;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: 200px; /* Ajusta este valor según cuánto quieras moverlo */
+}
+
+/* Imagen de la portada */
+.music-player .display img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Información de la canción */
+.music-player .song-info h5 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.music-player .song-info p {
+  color: #bbbbbb;
+  font-size: 0.9rem;
+}
+
+/* Estilo de los botones de control del reproductor */
+.controls .btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.control-icon {
+  width: 30px; /* Tamaño de los iconos */
+  height: 30px;
+  transition: filter 0.3s; /* Transición para el efecto hover */
+}
+
+/* Cambia a rojo cuando pasas el mouse */
+.controls .btn:hover .control-icon {
+  filter: invert(18%) sepia(91%) saturate(7482%) hue-rotate(1deg) brightness(97%) contrast(123%);
+}
+
+/* Estilo de la lista de música */
+#playlist {
+  background-color: #1f1f1f; /* Fondo oscuro para la lista */
+}
+
+#playlist .list-group-item {
+  background-color: #1f1f1f; /* Fondo oscuro para los elementos de la lista */
+  color: #ffffff; /* Texto blanco */
+  border: none; /* Sin borde */
+  text-align: left; /* Alineación a la izquierda */
+}
+
+#playlist .list-group-item .track-duration {
+  font-size: 0.9rem;
+  color: #cccccc; /* Color gris claro para la duración */
+}
+
+/* Cambia a gris claro con texto negro al pasar el mouse */
+#playlist .list-group-item:hover {
+  background-color: #e0e0e0; /* Fondo gris claro */
+  color: black !important; /* Texto negro */
+}
+
+#playlist .list-group-item:hover .track-duration {
+  color: #333333; /* Texto oscuro para la duración al hacer hover */
+}
+
+
+/* Barra de progreso */
+
+#progress-bar {
+  width: 100%;
+  margin: 10px 0;
+  background: #333; /* Fondo gris oscuro para la barra de progreso */
+  height: 5px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: hidden;
+}
+
+#progress-bar::-webkit-slider-runnable-track {
+  background: #555; /* Fondo gris claro para la pista */
+  height: 5px;
+}
+
+#progress-bar::-moz-range-track {
+  background: #555; /* Fondo gris claro para la pista en Firefox */
+  height: 5px;
+}
+
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #ff0000; /* Rojo para el thumb (punto) */
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px; /* Ajuste para centrar el thumb en la pista */
+}
+
+#progress-bar::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #ff0000; /* Rojo para el thumb en Firefox */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Estilo del contenedor de texto desplazable */
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.scrolling-text p {
+  display: inline-block;
+  padding-left: 100%; /* Comienza desde el borde derecho */
+  animation: scrollText 10s linear infinite; /* Controla la velocidad */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0); /* Inicia en la posición original */
+  }
+  100% {
+    transform: translateX(-100%); /* Desplaza todo el ancho hacia la izquierda */
+  }
+}
+
+/* Clase para el cursor personalizado */
+.custom-cursor {
+  cursor: url('img/rock_hand.png'), auto;
+}
+
+#intro{
+  padding-top: 80px;
+}
+
+/* Tamaño uniforme para las imágenes de la galería */
+.same-size {
+  width: 100%;
+  height: 200px; /* Ajusta la altura según prefieras */
+  object-fit: cover; /* Asegura que la imagen llene el contenedor */
 }
