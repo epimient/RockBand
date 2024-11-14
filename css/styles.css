@@ -1,0 +1,111 @@
+/* style.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .banner {
+    position: relative;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .banner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .banner p {
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Alineación y margen de la sección de suscripción y contacto */
+.section-subscribe {
+  padding: 20px 0;
+}
+
+.section-subscribe .col-md-6 {
+  padding: 10px;
+}
+
+/* Ajuste del tamaño y alineación del icono de demonio */
+.icono-demon {
+  width: 30px; /* Tamaño fijo en píxeles */
+  height: auto;
+  vertical-align: middle; /* Alineación vertical con el texto */
+}
+/* Línea de Separación Roja */
+.separator-line {
+  position: relative;
+  height: 2px;
+  max-width: 80%; /* Ajusta el ancho de la línea al contenido */
+  margin: 0 auto; /* Centra la línea */
+  background-color: transparent; /* Fondo transparente para el elemento principal */
+}
+
+.separator-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ff0000; /* Línea roja sin efectos adicionales */
+}
+
+.listen-section {
+  padding-top: 120px; /* Ajusta este valor según el espacio que necesites */
+  padding-bottom: 0;
+  margin-bottom: 0;
+  min-height: 100vh;
+}
+
+
+.buy-tickets-section {
+  padding-top: 120px; /* Ajusta este valor si necesitas más espacio */
+}
+
+h1 {
+  font-family: 'Metal Mania', cursive;
+  color: #ff0000; /* Color rojo para el título */
+}
+
+.tour-date .date {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.tour-date .venue {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.btn-outline-danger {
+  color: #ff0000;
+  border-color: #ff0000;
+}
+
+.btn-outline-danger:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.divider {
+  border-top: 1px solid #666;
+  margin: 0;
+}
