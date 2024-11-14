@@ -279,3 +279,37 @@ body {
   height: 200px; /* Ajusta la altura según prefieras */
   object-fit: cover; /* Asegura que la imagen llene el contenedor */
 }
+
+/* Estructura Masonry */
+.masonry {
+  column-count: 3; /* Cambia el número de columnas según tu preferencia */
+  column-gap: 15px; /* Espacio entre columnas */
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 15px;
+}
+
+.masonry img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.masonry img:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .masonry {
+    column-count: 1;
+  }
+}
